@@ -8,7 +8,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
+  imports: [RouterModule.forChild(routes)],//forChild en Module hijo
   exports: [RouterModule],
 })
 export class FormsRoutingModule {}

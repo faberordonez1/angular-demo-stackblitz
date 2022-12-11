@@ -5,9 +5,10 @@ import { RouterModule } from '@angular/router';
 
 //Componentes
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, RouterModule],
+  imports: [BrowserModule, FormsModule, RouterModule, AppRoutingModule],
   declarations: [AppComponent],
   bootstrap: [AppComponent],
 })
