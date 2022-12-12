@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {
+  AbstractControl,
   FormArray,
   FormBuilder,
   FormControl,
@@ -39,6 +40,20 @@ export class FormDemoComponent implements OnInit {
       this.camposArray.push(new FormControl(true, Validators.required))
     );
 
+    this.crearControlDinamico();
+  }
+
+  crearControlDinamico() {
+    let nombreControl = 'controlDinamico';
+    this.form.addControl(
+      nombreControl,
+      new FormControl(`ValorInicial`, Validators.required)
+    );
+
+    this.form.addControl(
+      'controlDinamico2',
+      new FormControl(`ValorInicial`, Validators.required)
+    );
     console.log(this.form.controls);
   }
 }
