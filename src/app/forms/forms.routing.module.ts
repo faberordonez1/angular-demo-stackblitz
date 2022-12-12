@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FormDemoComponent } from './form-demo/form-demo.component';
+import { DemoComponent } from './demo/demo.component';
 
 const routes: Routes = [
-  { path: '', children: [{ path: 'demo', component: FormDemoComponent }] },
-  { path: 'demo1', component: FormDemoComponent },
+  { path: '', children: [{ path: 'demoHijo', component: DemoComponent }] },
+  { path: 'demo', component: DemoComponent },
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],//forChild en Module hijo
+  imports: [RouterModule.forChild(routes)], //forChild en Module hijo
   exports: [RouterModule],
 })
 export class FormsRoutingModule {}

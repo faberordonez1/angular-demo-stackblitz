@@ -10,11 +10,11 @@ import {
 } from '@angular/forms';
 
 @Component({
-  selector: 'app-form-demo',
-  templateUrl: './form-demo.component.html',
-  styleUrls: ['./form-demo.component.css'],
+  selector: 'app-demo',
+  templateUrl: './demo.component.html',
+  styleUrls: ['./demo.component.css'],
 })
-export class FormDemoComponent implements OnInit {
+export class DemoComponent implements OnInit {
   form: FormGroup;
 
   constructor(private fb: FormBuilder) {
