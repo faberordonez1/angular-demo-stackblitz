@@ -25,7 +25,7 @@ export class DemoComponent implements OnInit {
 
   crearFormulario() {
     this.form = this.fb.group({
-      campo: ['', Validators.required],
+      campo: ['', [Validators.minLength(5)]], // COn minLength se omite el required
       camposArray: new FormArray([]),
     });
     this.crearArrayControls();
@@ -54,6 +54,13 @@ export class DemoComponent implements OnInit {
       'controlDinamico2',
       new FormControl(`ValorInicial`, Validators.required)
     );
+    console.log('Form creado');
     console.log(this.form.controls);
+  }
+
+  validarCampo() {
+    console.log('Validando Campos con keypress');
+    console.log('Vaslidadores', this.form.controls.campo.validator);
+    console.log('Errores', this.form.controls.campo.errors);
   }
 }
