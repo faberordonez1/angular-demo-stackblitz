@@ -61,6 +61,9 @@ export class DemoComponent implements OnInit {
   validarCampo() {
     console.log('Validando Campos con keypress');
     console.log('Vaslidadores', this.form.controls.campo.validator);
+    this.form.controls.campo.updateValueAndValidity();
+    this.form.controls.campo.markAsDirty(); //
+    console.log('Status', this.form.controls.campo.status);
     console.log('Errores', this.form.controls.campo.errors);
   }
 }
